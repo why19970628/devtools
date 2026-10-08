@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📱 二维码生成器</h1>
-      <p>文本或网址转二维码，支持自定义尺寸与一键下载保存</p>
-    </div>
+    <ToolHeader />
     <div class="qr-config">
       <div class="config-item">
         <label>内容</label>

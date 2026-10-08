@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔧 数据 0xFF 位运算换算</h1>
-      <p>位运算与掩码计算工具</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="operation" class="lang-select">
         <option value="and">AND (&)</option>

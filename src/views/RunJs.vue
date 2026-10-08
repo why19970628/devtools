@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>▶️ RunJs 在线运行 JS</h1>
-      <p>在线运行 JavaScript 代码并查看 console 输出</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn btn-primary" @click="run">▶ 运行</button>
       <button class="btn" @click="clear">清空</button>

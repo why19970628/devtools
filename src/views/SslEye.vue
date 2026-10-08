@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔒 SSL 协议套件探测</h1>
-      <p>探测目标服务器 SSL/TLS 协议版本与加密套件</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="domain" type="text" placeholder="输入域名，如 example.com" class="domain-input" @keyup.enter="probe" />
       <button class="btn btn-primary" @click="probe" :disabled="loading">

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🎨 字符线条艺术字 (ASCII Art)</h1>
-      <p>将英文和数字转换为经典 ASCII 字符线条艺术字</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="text" type="text" placeholder="输入文本" class="text-input" @input="generate" />
       <button class="btn btn-primary" @click="generate">生成</button>

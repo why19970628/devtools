@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📑 JSON 转 CSV / Excel</h1>
-      <p>将对象列表型 JSON 快速转换为带 BOM UTF-8 的 CSV 电子表格</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn btn-primary" @click="convert">转换</button>
       <button class="btn" @click="downloadCsv" :disabled="!csvResult">下载 CSV</button>

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🧾 淘宝错误码查询工具</h1>
-      <p>淘宝开放平台 API 常见错误码与说明</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="keyword" type="text" placeholder="搜索错误码或关键字，如 isv" class="search-input" />
     </div>

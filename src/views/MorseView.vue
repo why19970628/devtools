@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📡 摩斯密码在线转换</h1>
-      <p>英文/数字与摩斯电码 (· 与 -) 互相编码与解码</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="encode">文本 → 摩斯</option>

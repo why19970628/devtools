@@ -7,7 +7,7 @@
         @click="$emit('pick', null)"
       >
         <span class="item-icon">🏠</span>
-        <span class="item-title">全部工具</span>
+        <span class="item-title">{{ t('allTools') }}</span>
       </button>
       <button
         v-for="cat in categories"
@@ -17,7 +17,7 @@
         @click="$emit('pick', cat.id)"
       >
         <span class="item-icon">{{ cat.icon }}</span>
-        <span class="item-title">{{ cat.name }}</span>
+        <span class="item-title">{{ categoryName(cat) }}</span>
       </button>
     </div>
   </nav>
@@ -25,7 +25,10 @@
 
 <script setup>
 import { categories } from '../utils/tools'
+import { useI18n, categoryName } from '../composables/useI18n'
 
 defineProps({ active: { type: String, default: null } })
 defineEmits(['pick'])
+
+const { t } = useI18n()
 </script>

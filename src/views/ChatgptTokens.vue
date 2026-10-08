@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🤖 AI / ChatGPT Token 计数估算</h1>
-      <p>估算文本的 Token 数量，支持多种模型</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="model" class="lang-select">
         <option value="gpt-4">GPT-4</option>

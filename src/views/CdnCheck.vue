@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🚀 CDN 节点 IP 识别工具</h1>
-      <p>快速甄别目标 IP 是否属于阿里云、腾讯云、Cloudflare 等 CDN 边缘节点</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="ip" type="text" placeholder="输入 IP 地址" class="ip-input" @keyup.enter="check" />
       <button class="btn btn-primary" @click="check">检测</button>

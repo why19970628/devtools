@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>☕ Properties / Unicode 互转</h1>
-      <p>Java .properties 配置文件中文与 \u 转义互转</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="toUnicode">中文 → Unicode</option>

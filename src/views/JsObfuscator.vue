@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔐 JavaScript 代码混淆器</h1>
-      <p>JavaScript 代码混淆加密保护</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="level" class="lang-select">
         <option value="low">低 (变量名混淆)</option>

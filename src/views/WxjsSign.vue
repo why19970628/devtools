@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>✍️ 微信 JS-SDK 签名工具</h1>
-      <p>根据 jsapi_ticket 和页面 URL 计算微信 JS-SDK signature</p>
-    </div>
+    <ToolHeader />
     <div class="io-grid">
       <div class="io-item">
         <label>jsapi_ticket</label>

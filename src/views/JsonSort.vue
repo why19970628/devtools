@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📶 JSON 键名排序</h1>
-      <p>递归对 JSON 键名执行 A-Z 升序或降序重新排列</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="order" class="lang-select">
         <option value="asc">升序 (A-Z)</option>

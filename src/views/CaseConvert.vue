@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔠 命名风格 / 大小写转换</h1>
-      <p>驼峰、帕斯卡、下划线、中划线与大小写转换</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="camel">驼峰 camelCase</option>

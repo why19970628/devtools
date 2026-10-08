@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🍃 Properties 与 YAML 互转</h1>
-      <p>Spring Boot 配置文件 application.properties 与 application.yml 双向转换</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="prop2yaml">Properties → YAML</option>

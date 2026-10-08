@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>💾 文件大小单位换算</h1>
-      <p>Bytes, KB, MB, GB, TB, PB 实时多单位联动换算</p>
-    </div>
+    <ToolHeader />
     <div class="size-grid">
       <div class="size-item">
         <label>Bytes (B)</label>

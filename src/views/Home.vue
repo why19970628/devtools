@@ -1,17 +1,17 @@
 <template>
   <div class="home">
     <div class="hero">
-      <h1>🔧 DevTools 开发者工具箱</h1>
-      <p>开发者在线效率工具箱 · {{ tools.length }} 款纯前端工具，无需后端服务，数据不出本地</p>
-      <p class="hero-tip">按 <kbd>Ctrl</kbd> + <kbd>K</kbd> 快速检索全站工具，点击卡片右侧 ☆ 收藏常用工具</p>
+      <h1>{{ t('heroTitle') }}</h1>
+      <p>{{ t('heroSub', { n: tools.length }) }}</p>
+      <p class="hero-tip">{{ t('heroTip') }}</p>
     </div>
 
     <div v-if="activeCategory" class="category-section">
       <div class="category-title">
         <span class="category-icon">{{ getCategory(activeCategory)?.icon }}</span>
-        {{ getCategory(activeCategory)?.name }}
+        {{ categoryOf(activeCategory) }}
         <span style="font-size:13px;color:var(--text-muted);margin-left:auto">
-          {{ getToolsByCategory(activeCategory).length }} 个工具
+          {{ getToolsByCategory(activeCategory).length }} {{ t('toolsSuffix') }}
         </span>
       </div>
       <div class="tool-grid">
@@ -23,9 +23,9 @@
       <div v-for="cat in categories" :key="cat.id" class="category-section">
         <div class="category-title">
           <span class="category-icon">{{ cat.icon }}</span>
-          {{ cat.name }}
+          {{ categoryName(cat) }}
           <span style="font-size:13px;color:var(--text-muted);margin-left:auto">
-            {{ getToolsByCategory(cat.id).length }} 个工具
+            {{ getToolsByCategory(cat.id).length }} {{ t('toolsSuffix') }}
           </span>
         </div>
         <div class="tool-grid">
@@ -40,6 +40,14 @@
 import ToolCard from '../components/ToolCard.vue'
 import { categories, tools, getToolsByCategory, getCategory } from '../utils/tools'
 import { activeCategory } from '../utils/nav'
+import { useI18n, categoryName } from '../composables/useI18n'
+
+const { t } = useI18n()
+
+function categoryOf(categoryId) {
+  const cat = getCategory(categoryId)
+  return cat ? categoryName(cat) : categoryId
+}
 </script>
 
 <style scoped>

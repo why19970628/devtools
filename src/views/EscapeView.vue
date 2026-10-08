@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔣 Escape / Unescape</h1>
-      <p>JavaScript escape 与 unescape 字符转义互转</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="escape">Escape</option>

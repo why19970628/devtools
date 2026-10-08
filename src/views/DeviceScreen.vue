@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🖥️ 主流设备屏幕尺寸规范</h1>
-      <p>iPhone、iPad、主流 Android 旗舰屏幕物理与逻辑分辨率、DPR 速查</p>
-    </div>
+    <ToolHeader />
     <div class="device-table">
       <table>
         <thead>

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔁 SQL 转 SQL (不同数据库互转)</h1>
-      <p>支持 Oracle、MySQL、MSSQL、PostgreSQL、MongoDB、SQLite 语法一键互相转换</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="fromDb" class="lang-select">
         <option value="mysql">MySQL</option>

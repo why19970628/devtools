@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔠 字体生成工具</h1>
-      <p>CSS 字体样式生成与 Web Font 引入代码</p>
-    </div>
+    <ToolHeader />
     <div class="config-grid">
       <div class="config-item">
         <label>字体族 (font-family)</label>

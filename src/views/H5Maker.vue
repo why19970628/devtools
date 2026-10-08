@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📱 H5 页面制作工具</h1>
-      <p>在线编写并实时预览 H5 页面</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn btn-primary" @click="run">运行</button>
       <button class="btn" @click="exportHtml">导出 HTML</button>

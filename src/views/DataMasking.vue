@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🎭 敏感数据脱敏工具</h1>
-      <p>手机号、身份证号、姓名、邮箱、银行卡一键掩码脱敏</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="type" class="lang-select">
         <option value="phone">手机号</option>

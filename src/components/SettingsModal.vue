@@ -2,12 +2,12 @@
   <div v-if="open" class="modal-backdrop" @click.self="$emit('close')">
     <div class="modal-card">
       <div class="modal-header">
-        <h3>⚙︎ 设置</h3>
+        <h3>{{ t('settingsTitle') }}</h3>
         <button class="modal-close" @click="$emit('close')">✕</button>
       </div>
       <div class="modal-body">
         <div class="settings-group">
-          <div class="settings-label">外观主题</div>
+          <div class="settings-label">{{ t('themeLabel') }}</div>
           <div class="theme-options">
             <div
               class="theme-option"
@@ -21,7 +21,7 @@
                   <div class="preview-content" style="background:#f6f8fa"></div>
                 </div>
               </div>
-              <span>跟随时间</span>
+              <span>{{ t('themeAuto') }}</span>
             </div>
             <div
               class="theme-option"
@@ -35,7 +35,7 @@
                   <div class="preview-content" style="background:#fff"></div>
                 </div>
               </div>
-              <span>浅色</span>
+              <span>{{ t('themeLight') }}</span>
             </div>
             <div
               class="theme-option"
@@ -49,7 +49,7 @@
                   <div class="preview-content" style="background:#0f172a"></div>
                 </div>
               </div>
-              <span>深色</span>
+              <span>{{ t('themeDark') }}</span>
             </div>
           </div>
         </div>
@@ -61,9 +61,11 @@
 <script setup>
 import { computed } from 'vue'
 import { useTheme } from '../composables/useTheme'
+import { useI18n } from '../composables/useI18n'
 
 defineProps({ open: Boolean })
 const emit = defineEmits(['close'])
+const { t } = useI18n()
 const { theme, set } = useTheme()
 const mode = computed(() => theme.value)
 </script>

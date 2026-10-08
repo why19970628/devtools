@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📊 文本深度统计与字数分析</h1>
-      <p>字符数、单词数、行数、段落数等多维度统计</p>
-    </div>
+    <ToolHeader />
     <div class="io-panel">
       <div class="io-box">
         <div class="io-label"><span>输入文本</span></div>

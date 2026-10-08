@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>☕ JSON 转实体类</h1>
-      <p>自动分析 JSON 结构，一键生成 Java POJO / C# 实体类</p>
-    </div>
+    <ToolHeader />
 
     <div class="action-bar">
       <select v-model="lang" class="lang-select">

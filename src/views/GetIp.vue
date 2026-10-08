@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📍 获取我的外网 IP</h1>
-      <p>快速获取当前公网 IPv4 / IPv6 地址及地理位置运营商信息</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn btn-primary" @click="fetchIp" :disabled="loading">
         {{ loading ? '获取中...' : '获取 IP' }}

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>⛓️ 多语言字符串拼接</h1>
-      <p>拼接为 Java StringBuilder、SQL IN、JS 数组、Python 列表</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="format" class="lang-select">
         <option value="java">Java StringBuilder</option>

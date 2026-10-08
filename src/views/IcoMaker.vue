@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🌟 ICO 图标制作与转换</h1>
-      <p>将普通图片转换为包含多尺寸的标准 favicon.ico</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <label class="btn" style="cursor:pointer">
         上传图片

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📡 物联网 16 进制报文解析</h1>
-      <p>解析物联网设备 16 进制通信报文</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="hexInput" type="text" placeholder="输入 16 进制报文，如 55 AA 01 02 03" class="hex-input" @input="parse" />
       <button class="btn btn-primary" @click="parse">解析</button>

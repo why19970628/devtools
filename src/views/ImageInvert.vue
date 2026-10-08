@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🌓 图片反相反色在线工具</h1>
-      <p>纯前端本地 Canvas 极速像素颜色反转，生成底片负片效果并支持下载</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <label class="btn" style="cursor:pointer">
         上传图片

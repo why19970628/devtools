@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🖥️ 浏览器与客户端详细信息</h1>
-      <p>操作系统、屏幕物理/逻辑分辨率、DPR、网络及 WebGL GPU 硬件信息检测</p>
-    </div>
+    <ToolHeader />
     <div class="info-grid">
       <div class="info-card">
         <div class="card-header"><span class="card-title">系统信息</span></div>

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔓 JS 全能解密 (jsdec)</h1>
-      <p>JavaScript 代码解密与反混淆</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn btn-primary" @click="deobfuscate">反混淆</button>
       <button class="btn" @click="copyResult">复制结果</button>

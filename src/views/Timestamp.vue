@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>⏱️ Unix 时间戳互转</h1>
-      <p>秒/毫秒时间戳与北京时间、UTC互转，支持当前实时时钟</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn" @click="setNow">当前时间</button>
       <button class="btn btn-primary" @click="convert">转换</button>

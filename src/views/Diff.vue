@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔀 文本差异对比 (Diff)</h1>
-      <p>两段文本逐行对比，高亮差异</p>
-    </div>
+    <ToolHeader />
     <div class="io-panel">
       <div class="io-box">
         <div class="io-label"><span>文本 A</span></div>

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔌 WebSocket 在线测试</h1>
-      <p>在线测试 ws:// 或 wss:// 连接、发送消息与历史收发流</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="url" type="text" placeholder="ws://echo.websocket.org" class="url-input" />
       <button class="btn btn-primary" @click="connect" v-if="!connected">连接</button>

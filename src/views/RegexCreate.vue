@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📝 常用正则表达式代码生成</h1>
-      <p>常用正则表达式模板与多语言代码生成</p>
-    </div>
+    <ToolHeader />
     <div class="regex-list">
       <div v-for="item in regexList" :key="item.name" class="regex-item">
         <div class="regex-header">

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>⏰ Cron 表达式生成/校验</h1>
-      <p>可视化生成 Cron 表达式，支持校验与下次执行时间预览</p>
-    </div>
+    <ToolHeader />
     <div class="cron-builder">
       <div class="cron-row">
         <label>秒</label>

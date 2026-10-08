@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>💻 IP 与子网掩码计算</h1>
-      <p>CIDR 掩码计算、网络地址、广播地址、可用主机数与范围计算</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="ip" type="text" placeholder="IP 地址，如 192.168.1.1" class="ip-input" />
       <input v-model="cidr" type="number" min="0" max="32" placeholder="CIDR，如 24" class="cidr-input" />

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📋 HTTP Content-Type 对照表</h1>
-      <p>常见 MIME 类型与 Content-Type 对照速查</p>
-    </div>
+    <ToolHeader />
     <div class="mime-list">
       <div v-for="mime in mimes" :key="mime.type" class="mime-item">
         <span class="mime-type">{{ mime.type }}</span>

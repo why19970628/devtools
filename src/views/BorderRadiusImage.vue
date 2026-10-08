@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔘 在线生成圆角图片与头像</h1>
-      <p>图片快速裁切为自定义圆角矩形或圆形头像，输出透明通道 PNG</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <label class="btn" style="cursor:pointer">
         上传图片

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🎟️ 微信卡券签名工具</h1>
-      <p>根据 api_ticket 和卡券信息计算微信卡券 signature</p>
-    </div>
+    <ToolHeader />
     <div class="io-grid">
       <div class="io-item">
         <label>api_ticket</label>

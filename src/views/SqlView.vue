@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📋 数据库插入、修改字段视图</h1>
-      <p>可视化解析并对应 INSERT / UPDATE 复杂语句的字段与数值</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="insert">INSERT</option>

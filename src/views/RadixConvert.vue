@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔢 多进制转换</h1>
-      <p>2进制、8进制、10进制、16进制实时联动转换</p>
-    </div>
+    <ToolHeader />
     <div class="radix-grid">
       <div class="radix-item">
         <label>二进制 (BIN)</label>

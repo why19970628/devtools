@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🟧 Pornhub 风格 Logo 生成器</h1>
-      <p>黑底白字加圆角橙黄背景标志性双段 Logo 在线生成与高清 PNG 下载</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="text1" type="text" placeholder="第一段文字" class="text-input" />
       <input v-model="text2" type="text" placeholder="第二段文字" class="text-input" />

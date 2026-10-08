@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📊 条形码在线生成器</h1>
-      <p>生成 Code128、EAN-13 等条形码图片</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="format" class="lang-select">
         <option value="CODE128">Code128</option>

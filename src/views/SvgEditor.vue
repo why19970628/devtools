@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📐 SVG 在线编辑与实时预览</h1>
-      <p>SVG 矢量源码实时编辑排版、即时画布缩放预览</p>
-    </div>
+    <ToolHeader />
     <div class="io-panel">
       <div class="io-box">
         <div class="io-label"><span>SVG 源码</span></div>

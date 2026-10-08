@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📊 JSON 表格视图</h1>
-      <p>将包含对象的 JSON 列表渲染为交互式多列数据表格</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn btn-primary" @click="parse">解析</button>
       <button class="btn" @click="loadExample">加载示例</button>

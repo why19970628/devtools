@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔄 JSON / XML / YAML 互转</h1>
-      <p>JSON 与 XML、YAML、GET 参数互相转换</p>
-    </div>
+    <ToolHeader />
 
     <div class="action-bar">
       <select v-model="conversionType" class="lang-select">

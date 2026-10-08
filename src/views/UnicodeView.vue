@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🇨🇳 Unicode 中文互转</h1>
-      <p>\u4e2d\u6587 形式与普通中文字符串互相转换</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="toUnicode">中文 → Unicode</option>

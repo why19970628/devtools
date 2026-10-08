@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🌈 WEB 安全色速查表</h1>
-      <p>216 种跨平台标准网页安全色调色板</p>
-    </div>
+    <ToolHeader />
     <div class="color-grid">
       <div
         v-for="color in safeColors"

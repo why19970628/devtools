@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔑 淘宝 OAuth2.0 测试工具</h1>
-      <p>淘宝 OAuth2.0 授权流程在线调试</p>
-    </div>
+    <ToolHeader />
     <div class="config-grid">
       <div class="config-item">
         <label>App Key</label>

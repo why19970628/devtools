@@ -2,14 +2,14 @@
   <div v-if="open" class="modal-backdrop" @click.self="$emit('close')">
     <div class="modal-card" style="max-width:640px">
       <div class="modal-header">
-        <h3>☰ 全站工具导航</h3>
+        <h3>{{ t('menuTitle') }}</h3>
         <button class="modal-close" @click="$emit('close')">✕</button>
       </div>
       <div class="modal-body modal-body-scroll">
         <div v-for="cat in categories" :key="cat.id" style="margin-bottom:16px">
           <div class="menu-category-title">
-            <span>{{ cat.icon }}</span> {{ cat.name }}
-            <span style="margin-left:auto;font-size:10px">{{ getToolsByCategory(cat.id).length }} 个</span>
+            <span>{{ cat.icon }}</span> {{ categoryName(cat) }}
+            <span style="margin-left:auto;font-size:10px">{{ getToolsByCategory(cat.id).length }} {{ t('itemsSuffix') }}</span>
           </div>
           <div class="category-links">
             <a
@@ -17,7 +17,7 @@
               :key="tool.id"
               href="#"
               @click.prevent="go(tool)"
-            >{{ tool.name }}</a>
+            >{{ toolName(tool) }}</a>
           </div>
         </div>
       </div>
@@ -28,9 +28,11 @@
 <script setup>
 import { useRouter } from 'vue-router'
 import { categories, getToolsByCategory } from '../utils/tools'
+import { useI18n, toolName, categoryName } from '../composables/useI18n'
 
 defineProps({ open: Boolean })
 const emit = defineEmits(['close'])
+const { t } = useI18n()
 const router = useRouter()
 
 function go(tool) {

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🎬 在线视频转成帧图片 (抽帧工具)</h1>
-      <p>纯前端提取视频关键帧，支持自定义提取频率</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <label class="btn" style="cursor:pointer">
         上传视频

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🌐 IP 与 32位整数互转</h1>
-      <p>IPv4 点分十进制地址与 32 位整型、十六进制、二进制实时双向转换</p>
-    </div>
+    <ToolHeader />
     <div class="io-grid">
       <div class="io-item">
         <label>IP 地址</label>

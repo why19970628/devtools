@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🕷️ 搜索引擎蜘蛛 IP 识别</h1>
-      <p>百度、谷歌、必应、搜狗、360 等蜘蛛 IP 匹配与反向 DNS 鉴别指南</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="ip" type="text" placeholder="输入 IP 地址" class="ip-input" @keyup.enter="check" />
       <button class="btn btn-primary" @click="check">检测</button>

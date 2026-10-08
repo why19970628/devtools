@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📰 XML 格式化 / 压缩</h1>
-      <p>在线 XML 语法校验、缩进排版美化、极简压缩、实体转义、XML转JSON</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="format">格式化</option>

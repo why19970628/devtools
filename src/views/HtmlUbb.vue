@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>💬 HTML 与 UBB 代码互转</h1>
-      <p>论坛 UBB 代码与 HTML 标签双向转换及实时渲染预览</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="html2ubb">HTML → UBB</option>

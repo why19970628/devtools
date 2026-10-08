@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📏 PX 与 REM / EM 换算</h1>
-      <p>输入 PX 实时计算 REM，支持整段 CSS 样式代码批量换算</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <div class="config-item">
         <label>基准字体大小 (px)</label>

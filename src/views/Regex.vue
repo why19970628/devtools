@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔍 正则表达式测试</h1>
-      <p>在线正则表达式匹配测试与分组提取</p>
-    </div>
+    <ToolHeader />
     <div class="regex-input">
       <input v-model="pattern" type="text" placeholder="正则表达式，如 \d+" class="regex-field" />
       <input v-model="flags" type="text" placeholder="标志，如 gi" class="flags-field" />

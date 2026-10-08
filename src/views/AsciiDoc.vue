@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔣 ASCII 码完整对照表</h1>
-      <p>0-127 完整 ASCII 码，十进制、十六进制、二进制与字符含义对照</p>
-    </div>
+    <ToolHeader />
     <div class="ascii-table">
       <table>
         <thead>

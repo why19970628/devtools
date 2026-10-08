@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🚦 HTTP 状态码速查表</h1>
-      <p>完整 1xx-5xx HTTP 响应状态码速查与常见排查原因</p>
-    </div>
+    <ToolHeader />
     <div class="status-list">
       <div v-for="status in statuses" :key="status.code" class="status-item" :class="status.category">
         <span class="status-code">{{ status.code }}</span>

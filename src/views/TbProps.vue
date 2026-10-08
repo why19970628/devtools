@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🏷️ 淘宝商品属性查询工具</h1>
-      <p>查询淘宝商品类目与属性信息</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="itemId" type="text" placeholder="输入商品 ID (num_iid)" class="id-input" />
       <input v-model="appKey" type="text" placeholder="App Key" />

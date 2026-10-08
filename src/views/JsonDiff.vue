@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔀 JSON 对比工具</h1>
-      <p>两段 JSON 结构差异对比，高亮标记增删改字段</p>
-    </div>
+    <ToolHeader />
 
     <div class="io-panel">
       <div class="io-box">

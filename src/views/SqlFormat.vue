@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>💾 SQL 格式化美化</h1>
-      <p>支持 MySQL、PostgreSQL、Oracle 等 SQL 语句美化排版与压缩</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="format">格式化</option>

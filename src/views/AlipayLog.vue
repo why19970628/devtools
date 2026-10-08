@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📜 支付宝日志解析工具</h1>
-      <p>解析支付宝 SDK 调用日志与异步通知日志</p>
-    </div>
+    <ToolHeader />
     <div class="io-panel">
       <div class="io-box">
         <div class="io-label"><span>粘贴日志</span></div>

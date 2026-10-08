@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🧱 SQL 建表转 POJO / C# 实体类</h1>
-      <p>解析 MySQL CREATE TABLE 建表语句，自动生成 Lombok/JPA 或 C# Model 实体类</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="lang" class="lang-select">
         <option value="java">Java (Lombok)</option>

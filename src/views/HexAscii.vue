@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🧬 16进制与 ASCII 互转</h1>
-      <p>文本字符串与 16 进制 Hex 编码双向转换</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="toHex">文本 → Hex</option>

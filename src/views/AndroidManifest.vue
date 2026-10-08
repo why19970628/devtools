@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🤖 AndroidManifest 常用权限字典</h1>
-      <p>Android 开发常用权限声明与用途说明速查</p>
-    </div>
+    <ToolHeader />
     <div class="permission-list">
       <div v-for="perm in permissions" :key="perm.name" class="permission-item">
         <span class="perm-name">{{ perm.name }}</span>

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🧹 文本去重与多行排序</h1>
-      <p>多行文本去重、排序与统计</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn" @click="deduplicate">去重</button>
       <button class="btn" @click="sortAsc">升序</button>

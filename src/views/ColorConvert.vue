@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🎨 RGB / HEX 颜色互转</h1>
-      <p>HEX 16进制与 RGB / RGBA 互转，集成实时取色器与调色板</p>
-    </div>
+    <ToolHeader />
     <div class="color-picker-section">
       <input type="color" v-model="pickerColor" @input="fromPicker" class="color-picker" />
       <div class="color-preview" :style="{ background: pickerColor }"></div>

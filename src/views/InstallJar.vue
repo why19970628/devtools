@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>☕ Maven 本地 Jar 安装命令生成</h1>
-      <p>快速生成 mvn install:install-file 命令行及对应 pom.xml 的 dependency 依赖</p>
-    </div>
+    <ToolHeader />
     <div class="config-grid">
       <div class="config-item">
         <label>GroupId</label>

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🪟 弹出窗口 (window.open) 生成器</h1>
-      <p>图形化配置弹出窗口尺寸、位置与参数，生成原生 window.open 调用代码</p>
-    </div>
+    <ToolHeader />
     <div class="config-grid">
       <div class="config-item">
         <label>URL</label>

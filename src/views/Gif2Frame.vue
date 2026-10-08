@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🎞️ 在线 GIF 转成帧图片</h1>
-      <p>纯前端本地解析 GIF 动图并提取所有分帧</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <label class="btn" style="cursor:pointer">
         上传 GIF

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📝 HTML 与 Markdown 互转</h1>
-      <p>HTML 富文本标记与 Markdown 语法双向转换</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="html2md">HTML → Markdown</option>

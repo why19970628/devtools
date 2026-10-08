@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🧩 SQL 占位符参数还原</h1>
-      <p>自动将 MyBatis / JPA 日志中的 Preparing 问号 SQL 与 Parameters 参数还原为可执行 SQL</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn btn-primary" @click="restore">还原</button>
       <button class="btn" @click="copyResult">复制结果</button>

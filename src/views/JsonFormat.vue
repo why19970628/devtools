@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📄 JSON 格式化校验</h1>
-      <p>支持语法校验、代码着色、压缩、转义/去转义、Unicode转中文、转GET参数</p>
-    </div>
+    <ToolHeader />
 
     <div class="action-bar">
       <button class="btn btn-primary" @click="format">格式化</button>

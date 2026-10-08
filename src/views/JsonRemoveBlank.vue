@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🧹 JSON 移除空属性</h1>
-      <p>递归清理 JSON 中值为 null、空字符串、空数组或空对象的属性</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn btn-primary" @click="clean">清理</button>
       <button class="btn" @click="copyResult">复制结果</button>

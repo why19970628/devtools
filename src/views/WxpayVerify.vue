@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>✔️ 微信支付回调验签工具</h1>
-      <p>校验微信支付 v2 回调通知签名校验（MD5）</p>
-    </div>
+    <ToolHeader />
     <div class="io-item" style="margin-bottom:12px">
       <label>API 密钥 (key, 32位)</label>
       <input v-model="apiKey" type="password" placeholder="商户平台设置的 API 密钥" />

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🚪 常用网络端口对照表</h1>
-      <p>Web、数据库、Redis、RabbitMQ、Nacos 等常用服务默认端口速查</p>
-    </div>
+    <ToolHeader />
     <div class="port-list">
       <div v-for="port in ports" :key="port.port" class="port-item">
         <span class="port-number">{{ port.port }}</span>

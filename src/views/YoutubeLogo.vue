@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🟥 YouTube 风格 Logo 生成器</h1>
-      <p>YouTube 经典红底白字矩形圆角 Logo 在线定制与 PNG 图片导出</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="text" type="text" placeholder="输入文字" class="text-input" />
       <button class="btn btn-primary" @click="generate">生成</button>

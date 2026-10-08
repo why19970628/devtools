@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>💼 企业微信 (企业号) 调试工具</h1>
-      <p>企业微信 API 在线调试</p>
-    </div>
+    <ToolHeader />
     <div class="config-grid">
       <div class="config-item">
         <label>Corp ID</label>

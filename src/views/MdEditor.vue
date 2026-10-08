@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📝 Markdown 分屏编辑器</h1>
-      <p>Markdown 实时预览编辑</p>
-    </div>
+    <ToolHeader />
     <div class="md-editor">
       <textarea v-model="markdown" class="md-input" placeholder="输入 Markdown..."></textarea>
       <div class="md-preview" v-html="renderedHtml"></div>

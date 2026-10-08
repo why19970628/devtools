@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔗 URL 编码 / 解码</h1>
-      <p>URL 地址及参数 encodeURIComponent / decodeURIComponent</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="encode">编码</option>

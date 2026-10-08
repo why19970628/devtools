@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🛒 淘宝 API 测试工具</h1>
-      <p>淘宝开放平台 API 在线测试</p>
-    </div>
+    <ToolHeader />
     <div class="config-grid">
       <div class="config-item">
         <label>App Key</label>

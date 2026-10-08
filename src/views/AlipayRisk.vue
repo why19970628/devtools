@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🛡️ 支付宝 API 风险与安全检测工具</h1>
-      <p>支付宝 API 风险检测与安全扫描</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="apiEndpoint" type="text" placeholder="输入 API 地址" class="endpoint-input" />
       <button class="btn btn-primary" @click="scan" :disabled="loading">

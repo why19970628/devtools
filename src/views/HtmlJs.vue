@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>📜 HTML 与 JS 字符串互转</h1>
-      <p>HTML 源码快速转换为 JS 变量拼接与反向还原</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="toJs">HTML → JS</option>

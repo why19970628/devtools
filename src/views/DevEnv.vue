@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>⚙️ 开发环境依赖</h1>
-      <p>常用开发环境搭建与依赖配置速查</p>
-    </div>
+    <ToolHeader />
     <div class="env-grid">
       <div v-for="env in envs" :key="env.name" class="env-card">
         <div class="card-header"><span class="card-title">{{ env.name }}</span></div>

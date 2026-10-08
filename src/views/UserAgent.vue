@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🌐 常用 User-Agent 库与解析</h1>
-      <p>当前浏览器 UA 检测，及 iOS/Android/微信/爬虫蜘蛛高频 UA 速查</p>
-    </div>
+    <ToolHeader />
     <div class="current-ua">
       <div class="card">
         <div class="card-header"><span class="card-title">当前浏览器 UA</span></div>

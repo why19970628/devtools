@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🌳 JSON 树形视图查看器</h1>
-      <p>多层级树状交互式查看 JSON 结构，支持层级折叠展开、类型着色与快速复制</p>
-    </div>
+    <ToolHeader />
 
     <div class="action-bar">
       <button class="btn" @click="expandAll">全部展开</button>

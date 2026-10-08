@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🛡️ 强密码随机生成器</h1>
-      <p>高强度随机安全密码批量生成</p>
-    </div>
+    <ToolHeader />
     <div class="password-config">
       <div class="config-row">
         <label>长度</label>

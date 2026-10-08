@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>💳 微信支付 JSAPI 签名工具</h1>
-      <p>根据 prepay_id 计算微信支付 JSAPI 调起支付参数 paySign (v2 SHA1)</p>
-    </div>
+    <ToolHeader />
     <div class="io-grid">
       <div class="io-item">
         <label>appId</label>

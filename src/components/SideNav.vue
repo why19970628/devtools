@@ -1,7 +1,7 @@
 <template>
   <aside class="sidebar" :class="{ collapsed }">
     <div class="sidebar-toggle">
-      <button class="icon-btn" :title="collapsed ? '展开' : '收起'" @click="$emit('toggle')">
+      <button class="icon-btn" :title="collapsed ? t('navExpand') : t('navCollapse')" @click="$emit('toggle')">
         {{ collapsed ? '▸' : '◂' }}
       </button>
     </div>
@@ -13,7 +13,7 @@
           :key="cat.id"
           class="nav-link cat-icon-only"
           :class="{ active: activeCategory === cat.id }"
-          :title="cat.name"
+          :title="categoryName(cat)"
           @click="$emit('pick-category', cat.id)"
         >
           <span class="tool-icon">{{ cat.icon }}</span>
@@ -26,7 +26,7 @@
         <div v-for="cat in categories" :key="cat.id" class="category-group">
           <div class="side-cat-title">
             <span>{{ cat.icon }}</span>
-            <span>{{ cat.name }}</span>
+            <span>{{ categoryName(cat) }}</span>
             <span style="margin-left:auto;font-size:10px">{{ groupTools(cat.id).length }}</span>
           </div>
           <ul class="nav-list">
@@ -37,7 +37,7 @@
                 @click="go(tool)"
               >
                 <span class="tool-icon">{{ tool.icon }}</span>
-                <span class="tool-name">{{ tool.name }}</span>
+                <span class="tool-name">{{ toolName(tool) }}</span>
               </button>
             </li>
           </ul>
@@ -51,9 +51,12 @@
 import { ref, watch } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { categories, tools, getToolsByCategory } from '../utils/tools'
+import { useI18n, toolName, categoryName } from '../composables/useI18n'
 
 defineProps({ collapsed: Boolean })
 defineEmits(['toggle', 'pick-category'])
+
+const { t } = useI18n()
 
 const router = useRouter()
 const route = useRoute()

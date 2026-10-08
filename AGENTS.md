@@ -35,6 +35,7 @@ Local guide for this repository (GitHub: why19970628/devtools). Read this and `R
 
 - Composition API + `<script setup>`, no TypeScript, no new dependencies; prefer native browser APIs and existing `src/utils` helpers.
 - Theme: `src/composables/useTheme.js`, plus the boot script in `index.html` (localStorage keys `devtools_theme`, `devtools_theme_manual`).
+- Language: `src/composables/useI18n.js` — reactive `lang` (localStorage `devtools_lang`), chrome copy via `t(key)` dict, and `toolName`/`toolDesc`/`categoryName` helpers that pick the `nameEn`/`descEn`/`nameEn` fields on the current language. Tool pages render their header through the globally registered `<ToolHeader/>` component (reads `getToolByPath`), so new tools only edit `tools.js`.
 - Favorites: `src/utils/favorites.js` (localStorage). Shared category state: `src/utils/nav.js`.
 - Layout is composed in `src/App.vue` (header bar, sidebar, horizontal nav shown only on Home, footer, search/menu/settings modals).
 - Prefer one fix/change in shared CSS or a shared component over per-page edits.

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>↔️ 全角 / 半角字符互转</h1>
-      <p>全角字母数字标点与标准半角字符转换</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="toFull">半角 → 全角</option>

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>⌨️ 键盘按键 KeyCode 速查</h1>
-      <p>键盘按键与 keyCode 对照表</p>
-    </div>
+    <ToolHeader />
     <div class="key-grid">
       <div v-for="key in keys" :key="key.code" class="key-item">
         <span class="key-name">{{ key.name }}</span>

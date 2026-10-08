@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔑 RSA 公私钥加解密与签名</h1>
-      <p>纯前端生成 RSA 密钥对，支持加解密与签名验签</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="keySize" class="lang-select">
         <option value="1024">1024 位</option>

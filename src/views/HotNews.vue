@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔥 今日热榜 · 实时聚焦</h1>
-      <p>聚合 36氪、掘金、知乎、少数派 等平台实时热点</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn btn-primary" @click="fetchNews" :disabled="loading">
         {{ loading ? '获取中...' : '获取热榜' }}

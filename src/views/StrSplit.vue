@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>✂️ 字符串批量分割提取</h1>
-      <p>按分隔符批量分割字符串并提取</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="delimiter" type="text" placeholder="分隔符" class="delimiter-input" />
       <button class="btn btn-primary" @click="split">分割</button>

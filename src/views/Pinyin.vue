@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🀄 汉字转拼音</h1>
-      <p>汉字快速转全拼拼音或首字母缩写</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="full">全拼</option>

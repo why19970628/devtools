@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🌐 i18n 属性文件互转</h1>
-      <p>前端 vue-i18n/react-i18next 的 JSON 扁平键值对与 Java Properties 互转</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="json2prop">JSON → Properties</option>

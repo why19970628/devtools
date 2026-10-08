@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>#️⃣ 哈希计算 (MD5/SHA)</h1>
-      <p>MD5、SHA-1、SHA-256、SHA-512 在线哈希散列计算</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="algorithm" class="lang-select">
         <option value="MD5">MD5</option>

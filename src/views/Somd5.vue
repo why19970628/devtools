@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🌈 SOMD5 在线彩虹表解密</h1>
-      <p>MD5 在线彩虹表查询解密</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="md5hash" type="text" placeholder="输入 MD5 哈希值" class="hash-input" @keyup.enter="query" />
       <button class="btn btn-primary" @click="query" :disabled="loading">

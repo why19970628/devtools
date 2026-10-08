@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔧 支付宝接口报错排错工具</h1>
-      <p>支付宝常见错误码与排错指引</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="keyword" type="text" placeholder="搜索错误码或关键字，如 40002" class="search-input" />
     </div>

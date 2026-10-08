@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🗺️ 经纬度坐标系转换</h1>
-      <p>WGS84、GCJ-02 (高德/腾讯)、BD-09 (百度) 互转</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="wgs84ToGcj02">WGS84 → GCJ-02</option>

@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔗 在线短网址生成与还原</h1>
-      <p>长链接快速缩短为简易短网址，并支持短网址防钓鱼安全反查</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="shorten">生成短网址</option>

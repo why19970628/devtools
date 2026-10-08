@@ -8,7 +8,7 @@
           v-model="keyword"
           class="search-input"
           type="text"
-          placeholder="搜索工具、类别、路径..."
+          :placeholder="t('searchPlaceholder')"
           @input="resetActive"
           @keydown="onKey"
         />
@@ -16,11 +16,11 @@
       </div>
 
       <div v-if="!keyword.trim()" class="popover-empty" style="padding:32px 0">
-        输入关键词检索全站 {{ tools.length }} 个工具，或按 Ctrl + K 快速弹出
+        {{ t('searchHint', { n: tools.length }) }}
       </div>
 
       <div v-else-if="!results.length" class="popover-empty" style="padding:32px 0">
-        未找到与 "{{ keyword }}" 匹配的工具
+        {{ t('searchEmpty', { kw: keyword }) }}
       </div>
 
       <div v-else class="search-list">
@@ -35,19 +35,19 @@
           <span class="search-item-icon">{{ tool.icon }}</span>
           <div class="search-item-info">
             <div class="search-item-name">
-              {{ tool.name }}
-              <span style="font-size:11px;color:var(--text-muted)">{{ toolCategory(tool) }}</span>
+              {{ toolName(tool) }}
+              <span style="font-size:11px;color:var(--text-muted)">{{ catName(tool.category) }}</span>
             </div>
-            <div class="search-item-desc">{{ tool.desc }}</div>
+            <div class="search-item-desc">{{ toolDesc(tool) }}</div>
           </div>
         </div>
       </div>
 
       <div class="search-footer">
-        <span><kbd>↑</kbd><kbd>↓</kbd> 选择</span>
-        <span><kbd>Enter</kbd> 打开</span>
-        <span><kbd>Esc</kbd> 关闭</span>
-        <span style="margin-left:auto">共 {{ results.length }} 个结果</span>
+        <span><kbd>↑</kbd><kbd>↓</kbd> {{ t('select') }}</span>
+        <span><kbd>Enter</kbd> {{ t('open') }}</span>
+        <span><kbd>Esc</kbd> {{ t('close') }}</span>
+        <span style="margin-left:auto">{{ t('results', { n: results.length }) }}</span>
       </div>
     </div>
   </div>
@@ -57,9 +57,12 @@
 import { ref, computed, nextTick, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import { tools, getCategory, searchTools } from '../utils/tools'
+import { useI18n, toolName, toolDesc, categoryName } from '../composables/useI18n'
 
 const props = defineProps({ open: Boolean })
 const emit = defineEmits(['open', 'close'])
+
+const { t } = useI18n()
 
 const router = useRouter()
 const keyword = ref('')
@@ -68,8 +71,9 @@ const inputEl = ref(null)
 
 const results = computed(() => searchTools(keyword.value))
 
-function toolCategory(tool) {
-  return getCategory(tool.category)?.name || ''
+function catName(categoryId) {
+  const cat = getCategory(categoryId)
+  return cat ? categoryName(cat) : categoryId
 }
 function resetActive() { activeIndex.value = 0 }
 

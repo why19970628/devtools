@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔒 AES / DES 对称加解密</h1>
-      <p>支持 AES、DES 算法，多种工作模式（CBC/ECB）与填充方式</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="algorithm" class="lang-select">
         <option value="AES">AES</option>

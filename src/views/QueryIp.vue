@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🗺️ IP 归属地与运营商查询</h1>
-      <p>输入任意 IPv4 地址，即时查询物理地理位置、经纬度、ASN 编号与服务商</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="ip" type="text" placeholder="输入 IP 地址，如 8.8.8.8" class="ip-input" @keyup.enter="query" />
       <button class="btn btn-primary" @click="query" :disabled="loading">

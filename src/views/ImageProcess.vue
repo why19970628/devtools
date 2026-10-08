@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🖼️ 图片综合处理工作台</h1>
-      <p>纯前端本地图片裁剪、质量压缩、格式转换与尺寸大小调整</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <label class="btn" style="cursor:pointer">
         上传图片

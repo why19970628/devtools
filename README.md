@@ -23,6 +23,7 @@ A fast, front-end-only collection of **132** online tools — format, convert, e
 - 🔍 **Instant search** — press `Ctrl + K` to search all tools and jump right in.
 - ⭐ **Favorites** — pin the tools you use most; they persist locally.
 - 🌓 **Smart theme** — auto light/dark by time of day, with a manual toggle.
+- 🌐 **Bilingual UI** — switch between Chinese and English at a click (page titles, tool names & descriptions included).
 - 📱 **Responsive** — works on desktop and mobile.
 
 ## 🧰 Tool Categories

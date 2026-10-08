@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🈶 简繁体中文互转</h1>
-      <p>简体中文与繁体中文在线互相转换</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="mode" class="lang-select">
         <option value="s2t">简体 → 繁体</option>

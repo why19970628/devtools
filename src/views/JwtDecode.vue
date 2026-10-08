@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🎫 JWT 在线解码</h1>
-      <p>JSON Web Token (JWT) 头部与 Payload 荷载高亮解析</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <button class="btn btn-primary" @click="decode">解码</button>
       <button class="btn" @click="loadExample">加载示例</button>

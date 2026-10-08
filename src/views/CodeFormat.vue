@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>💻 HTML / JS / CSS 格式化</h1>
-      <p>HTML、JavaScript、CSS 代码美化与紧凑压缩</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <select v-model="lang" class="lang-select">
         <option value="html">HTML</option>

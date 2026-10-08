@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>💰 数字转人民币大写金额</h1>
-      <p>阿拉伯数字金额一键转标准财务发票大写</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="amount" type="text" placeholder="输入金额，如 12345.67" class="amount-input" @input="convert" />
       <button class="btn btn-primary" @click="convert">转换</button>

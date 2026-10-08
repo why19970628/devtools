@@ -1,9 +1,6 @@
 <template>
   <div class="tool-page">
-    <div class="page-header">
-      <h1>🔒 SSL 证书过期时间查询</h1>
-      <p>在线探测目标 HTTPS 域名的真实 TLS 证书、颁发机构、到期失效时间与剩余天数</p>
-    </div>
+    <ToolHeader />
     <div class="action-bar">
       <input v-model="domain" type="text" placeholder="输入域名，如 example.com" class="domain-input" @keyup.enter="query" />
       <button class="btn btn-primary" @click="query" :disabled="loading">
