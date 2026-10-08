@@ -1,51 +1,59 @@
-# DevTools 项目代理指南
+# DevTools Project Agent Guide
 
-本文件是 `devtools` 仓库（GitHub: why19970628/devtools）的局部规范。进入本项目前先读本文件与 `README.md`。
+Local guide for this repository (GitHub: why19970628/devtools). Read this and `README.md` before working in the project.
 
-## 项目概述
+## Project overview
 
-- 纯前端开发者工具箱，Vue 3 + Vite + vue-router，共 132 款工具、12 个分类。
-- 设计目标：UI/交互对齐 [devtools.cn](https://www.devtools.cn)（工具页铺满内容区、输入输出框占满剩余高度、示例数据预填、Ctrl+K 搜索、深浅主题、收藏夹）。
-- 100% 客户端运行：无后端、无上传、无环境变量、无密钥。
+- A front-end-only developer toolbox: Vue 3 + Vite + vue-router, **132 tools across 12 categories**.
+- Design goal: UI & behavior are aligned with [devtools.cn](https://www.devtools.cn) — tool pages fill the whole content area (no `max-width` centering), input/output panels grow to fill the remaining window height, inputs are pre-filled with sample data, `Ctrl+K` global search, time-based light/dark theme, and local favorites.
+- 100% client-side: no backend, no uploads, no environment variables, no secrets.
 
-## 常用命令
+## Environment
 
-- `npm run dev` — 开发服务器（默认 http://localhost:5173）
-- `npm run build` — 生产构建，产物在 `dist/`
-- `npm run preview` — 预览构建产物
-- 注意：构建时会有预存在的 CSS minify 警告 `Unexpected ".1xx"…".5xx"`（HttpStatus 相关页面 scoped 选择器），非本次改动引入，可忽略。
+- Node.js >= 18 (see `engines` in `package.json`).
+- Router uses `createWebHistory`. Static hosting such as GitHub Pages requires switching to `createWebHashHistory` (or an SPA-fallback `404.html`) before enabling a Pages deploy.
 
-## 新增工具流程
+## Common commands
 
-1. 新建 `src/views/<Name>.vue`：
-   - 根元素用 `class="tool-page"`；复用全局样式（`src/assets/main.css`：`.page-header`、`.action-bar`、`.io-panel`、`.io-box`、`.io-textarea`、`.btn` 等）。
-   - 页面**不要设置** `max-width` 居中（工具页需铺满内容区）。
-   - 输入框**必须预填示例数据**，参考各工具现有实现。
-2. 在 `src/utils/tools.js` 的 `tools` 数组登记：`{ id, name, category, path, desc, icon }`。
-3. 在 `src/router/index.js` 添加懒加载路由。
+- `npm run dev` — dev server (default http://localhost:5173)
+- `npm run build` — production build into `dist/`
+- `npm run preview` — preview the production build
+- No test framework. Verification = a passing `npm run build` plus headless-Chrome checks (below).
+- Build note: the pre-existing CSS-minify warnings `Unexpected ".1xx"…".5xx"` come from HttpStatus-related scoped selectors; they are not introduced by your changes and can be ignored.
 
-## 代码约定
+## Adding a new tool
 
-- 组合式 API + `<script setup>`，无 TypeScript，不引入新依赖；优先用浏览器原生能力与 `src/utils` 现有工具。
-- 主题：`src/composables/useTheme.js`（auto 按时段 + 手动切换，localStorage `devtools_theme`）。
-- 收藏：`src/utils/favorites.js`（localStorage）。全局分类状态：`src/utils/nav.js`。
-- 功能组件在 `src/components/`，布局由 `src/App.vue` 组织（顶栏、侧栏、横向导航只在首页显示、页脚、搜索弹窗等）。
-- 保持最小改动：能改共享 CSS/组件一处生效的，不逐个页面改。
+1. Create `src/views/<Name>.vue`:
+   - Root element: `class="tool-page"`.
+   - Reuse the shared styles in `src/assets/main.css` (`.page-header`, `.action-bar`, `.io-panel`, `.io-box`, `.io-textarea`, `.btn`, …).
+   - Do **not** center with `max-width` — tool pages must fill the content area.
+   - Always pre-fill the input with a small sample so users can try the tool immediately (see existing views, e.g. `JsonFormat.vue`, `Base64.vue`).
+2. Register it in `src/utils/tools.js` (`tools` array): `{ id, name, category, path, desc, icon }`.
+3. Add a lazy route in `src/router/index.js` pointing at the new view.
 
-## 验证
+## Code conventions
 
-- 每次改动后运行 `npm run build` 确认构建通过。
-- 页面渲染/尺寸验证用 headless Chrome（`--dump-dom` 或本地 remote-debugging + CDP），测量工具可用 `/var/folders/gv/533ns5f53j15dfzpt_50nn5c0000gn/T/opencode/dtc/` 下的临时脚本。
-- 参考实现：`src/views/JsonFormat.vue`（示例数据 + onMounted 自动格式化）、`src/views/Base64.vue`。
+- Composition API + `<script setup>`, no TypeScript, no new dependencies; prefer native browser APIs and existing `src/utils` helpers.
+- Theme: `src/composables/useTheme.js`, plus the boot script in `index.html` (localStorage keys `devtools_theme`, `devtools_theme_manual`).
+- Favorites: `src/utils/favorites.js` (localStorage). Shared category state: `src/utils/nav.js`.
+- Layout is composed in `src/App.vue` (header bar, sidebar, horizontal nav shown only on Home, footer, search/menu/settings modals).
+- Prefer one fix/change in shared CSS or a shared component over per-page edits.
 
-## 文档位置
+## Verification
 
-- 项目自身文档：仓库根目录 `README.md`（英文默认）、`README_zh-CN.md`、`CONTRIBUTING.md`、`SECURITY.md`。
-- 工作区共享文档统一在 `code/docs/`（见工作区根 `AGENTS.md`）。
-- 变更结构、接口、配置、数据流或安全规则时，同步更新对应文档。
-- 文档中不记录密钥、token 等凭证。
+- Run `npm run build` after every change.
+- For render/layout/size checks use headless Chrome (`--dump-dom`, or a local `--remote-debugging-port` + CDP for measurements). Scratch scripts live under `/var/folders/gv/533ns5f53j15dfzpt_50nn5c0000gn/T/opencode/dtc/`.
+- Reference implementations: `src/views/JsonFormat.vue` (sample data + `onMounted` auto-format + full-height `io-panel`), `src/views/Base64.vue`.
 
-## Git 与发布
+## Docs & assets
 
-- 默认分支 `main`；CI 见 `.github/workflows/ci.yml`（push/PR 自动 `npm ci && npm run build`）。
-- 提交信息参考仓库现有风格；未经用户明确要求不擅自 push。
+- Project docs: `README.md` (English, default), `README_zh-CN.md`, `LICENSE`, `CONTRIBUTING.md`, `SECURITY.md`.
+- The READMEs reference `logo.svg` and image files under `screenshots/` — regenerate the screenshots when the UI changes visibly.
+- Shared workspace-level docs live in `code/docs/` (see the workspace-root `AGENTS.md`).
+- Never record secrets, tokens, or credentials in docs.
+
+## Git & release
+
+- Default branch: `main`. CI is `.github/workflows/ci.yml` (`npm ci && npm run build` on push/PR).
+- Commit messages: short conventional prefixes in the current repo style (`feat:`, `fix:`, `docs:`, `design:`).
+- Do not push without an explicit user request.
