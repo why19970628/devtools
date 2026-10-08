@@ -1,0 +1,178 @@
+export const categories = [
+  { id: 'json', name: 'JSON 工具', icon: '📄' },
+  { id: 'enc', name: '编码 / 加密', icon: '🔐' },
+  { id: 'format', name: '代码格式化', icon: '💻' },
+  { id: 'convert', name: '常用转换', icon: '🔄' },
+  { id: 'frontend', name: '前端 / UI 工具', icon: '🎨' },
+  { id: 'backend', name: '后端 / 数据库', icon: '🗄️' },
+  { id: 'network', name: '网络工具', icon: '🌐' },
+  { id: 'docs', name: '开发速查文档', icon: '📚' },
+  { id: 'othertools', name: '常用开发辅助', icon: '🛠️' },
+  { id: 'iot', name: '物联网 / 嵌入式', icon: '📡' },
+  { id: 'openplatform', name: '开放平台与调试', icon: '🔌' },
+  { id: 'resources', name: '开发文档与资源', icon: '📖' },
+]
+
+export const tools = [
+  { id: 'json-format', name: 'JSON 格式化校验', category: 'json', path: '/json/format', desc: '支持语法校验、代码着色、压缩、转义/去转义、Unicode转中文、转GET参数、历史记录', icon: '📄' },
+  { id: 'json-viewer', name: 'JSON 树形视图查看器', category: 'json', path: '/json/viewer', desc: '多层级树状交互式查看 JSON 结构，支持层级折叠展开、类型着色与快速复制', icon: '🌳' },
+  { id: 'json-diff', name: 'JSON 对比工具', category: 'json', path: '/json/diff', desc: '两段 JSON 结构差异对比，高亮标记增删改字段', icon: '🔀' },
+  { id: 'json-pojo', name: 'JSON 转实体类', category: 'json', path: '/json/pojo', desc: '自动分析 JSON 结构，一键生成 Java POJO / C# 实体类', icon: '☕' },
+  { id: 'json-convert', name: 'JSON / XML / YAML 互转', category: 'json', path: '/json/convert', desc: 'JSON 与 XML、YAML、GET 参数互相转换', icon: '🔄' },
+  { id: 'json-remove-blank', name: 'JSON 移除空属性', category: 'json', path: '/json/remove-blank', desc: '递归清理 JSON 中值为 null、空字符串、空数组或空对象的属性', icon: '🧹' },
+  { id: 'json-sort', name: 'JSON 键名排序', category: 'json', path: '/json/sort', desc: '递归对 JSON 键名执行 A-Z 升序或降序重新排列', icon: '📶' },
+  { id: 'json-table', name: 'JSON 表格视图', category: 'json', path: '/json/table', desc: '将包含对象的 JSON 列表渲染为交互式多列数据表格', icon: '📊' },
+  { id: 'json-to-excel', name: 'JSON 转 CSV / Excel', category: 'json', path: '/json/to-excel', desc: '将对象列表型 JSON 快速转换为带 BOM UTF-8 的 CSV 电子表格', icon: '📑' },
+
+  { id: 'base64', name: 'Base64 编解码', category: 'enc', path: '/enc/base64', desc: '文本或图片文件的 Base64 编码与解码转换', icon: '🔤' },
+  { id: 'crypto-hash', name: '哈希计算 (MD5/SHA)', category: 'enc', path: '/enc/hash', desc: 'MD5、SHA-1、SHA-256、SHA-512 在线哈希散列计算', icon: '#️⃣' },
+  { id: 'aes-des', name: 'AES / DES 对称加解密', category: 'enc', path: '/enc/aes-des', desc: '支持 AES、DES 算法，多种工作模式（CBC/ECB）与填充方式', icon: '🔒' },
+  { id: 'jwt-decode', name: 'JWT 在线解码', category: 'enc', path: '/enc/jwt', desc: 'JSON Web Token (JWT) 头部与 Payload 荷载高亮解析', icon: '🎫' },
+  { id: 'url-encode', name: 'URL 编码 / 解码', category: 'enc', path: '/enc/url', desc: 'URL 地址及参数 encodeURIComponent / decodeURIComponent', icon: '🔗' },
+  { id: 'unicode-chinese', name: 'Unicode 中文互转', category: 'enc', path: '/enc/unicode', desc: '\\u4e2d\\u6587 形式与普通中文字符串互相转换', icon: '🇨🇳' },
+  { id: 'escape', name: 'Escape / Unescape', category: 'enc', path: '/enc/escape', desc: 'JavaScript escape 与 unescape 字符转义互转', icon: '🔣' },
+  { id: 'morse', name: '摩斯密码在线转换', category: 'enc', path: '/enc/morse', desc: '英文/数字与摩斯电码 (· 与 -) 互相编码与解码', icon: '📡' },
+  { id: 'random-password', name: '强密码随机生成器', category: 'enc', path: '/enc/random-password', desc: '高强度随机安全密码批量生成', icon: '🛡️' },
+  { id: 'rsa', name: 'RSA 公私钥加解密与签名', category: 'enc', path: '/enc/rsa', desc: '纯前端生成 1024/2048 位 RSA 密钥对，支持 RSA-OAEP 加解密与 RSA-PSS 签名验签', icon: '🔑' },
+
+  { id: 'sql-format', name: 'SQL 格式化美化', category: 'format', path: '/format/sql', desc: '支持 MySQL、PostgreSQL、Oracle 等 SQL 语句美化排版与压缩', icon: '💾' },
+  { id: 'code-format', name: 'HTML / JS / CSS 格式化', category: 'format', path: '/format/code', desc: 'HTML、JavaScript、CSS 代码美化与紧凑压缩', icon: '💻' },
+  { id: 'xml-format', name: 'XML 格式化 / 压缩', category: 'format', path: '/format/xml', desc: '在线 XML 语法校验、缩进排版美化、极简压缩、实体转义、XML转JSON及文件导出', icon: '📰' },
+
+  { id: 'timestamp', name: 'Unix 时间戳互转', category: 'convert', path: '/convert/timestamp', desc: '秒/毫秒时间戳与北京时间、UTC互转，支持当前实时时钟', icon: '⏱️' },
+  { id: 'radix-convert', name: '多进制转换', category: 'convert', path: '/convert/radix', desc: '2进制、8进制、10进制、16进制实时联动转换', icon: '🔢' },
+  { id: 'case-convert', name: '命名风格 / 大小写转换', category: 'convert', path: '/convert/case', desc: '驼峰 (camelCase)、帕斯卡 (PascalCase)、下划线 (snake_case)、中划线 (kebab-case) 与大小写转换', icon: '🔠' },
+  { id: 'color-convert', name: 'RGB / HEX 颜色互转', category: 'convert', path: '/convert/color', desc: 'HEX 16进制与 RGB / RGBA 互转，集成实时取色器与调色板', icon: '🎨' },
+  { id: 'qrcode', name: '二维码生成器', category: 'convert', path: '/convert/qrcode', desc: '文本或网址转二维码，支持自定义尺寸与一键下载保存', icon: '📱' },
+  { id: 'pinyin', name: '汉字转拼音', category: 'convert', path: '/convert/pinyin', desc: '汉字快速转全拼拼音或首字母缩写', icon: '🀄' },
+  { id: 'chinese-convert', name: '简繁体中文互转', category: 'convert', path: '/convert/chinese', desc: '简体中文与繁体中文在线互相转换', icon: '🈶' },
+  { id: 'num-to-rmb', name: '数字转人民币大写金额', category: 'convert', path: '/convert/num-to-rmb', desc: '阿拉伯数字金额一键转标准财务发票大写', icon: '💰' },
+  { id: 'full-half', name: '全角 / 半角字符互转', category: 'convert', path: '/convert/full-half', desc: '全角字母数字标点与标准半角字符转换', icon: '↔️' },
+  { id: 'filesize', name: '文件大小单位换算', category: 'convert', path: '/convert/filesize', desc: 'Bytes, KB, MB, GB, TB, PB 实时多单位联动换算', icon: '💾' },
+  { id: 'hex-ascii', name: '16进制与 ASCII 互转', category: 'convert', path: '/convert/hex-ascii', desc: '文本字符串与 16 进制 Hex 编码双向转换', icon: '🧬' },
+  { id: 'string-concat', name: '多语言字符串拼接', category: 'convert', path: '/convert/string-concat', desc: '拼接为 Java StringBuilder、SQL IN、JS 数组、Python 列表', icon: '⛓️' },
+  { id: 'data-masking', name: '敏感数据脱敏工具', category: 'convert', path: '/convert/data-masking', desc: '手机号、身份证号、姓名、邮箱、银行卡一键掩码脱敏', icon: '🎭' },
+  { id: 'properties-convert', name: 'Properties / Unicode 互转', category: 'convert', path: '/convert/properties', desc: 'Java .properties 配置文件中文与 \\u 转义互转', icon: '☕' },
+  { id: 'html-markdown', name: 'HTML 与 Markdown 互转', category: 'convert', path: '/convert/html-markdown', desc: 'HTML 富文本标记与 Markdown 语法双向转换', icon: '📝' },
+  { id: 'coordinate-convert', name: '经纬度坐标系转换', category: 'convert', path: '/convert/coordinate', desc: 'WGS84、GCJ-02 (高德/腾讯)、BD-09 (百度) 互转', icon: '🗺️' },
+  { id: 'ip2int', name: 'IP 与 32位整数互转', category: 'convert', path: '/convert/ip2int', desc: 'IPv4 点分十进制地址与 32 位整型互转', icon: '🌐' },
+  { id: 'html-js', name: 'HTML 与 JS 字符串互转', category: 'convert', path: '/convert/html-js', desc: 'HTML 源码快速转换为 JS 变量拼接与反向还原', icon: '📜' },
+  { id: 'html-ubb', name: 'HTML 与 UBB 代码互转', category: 'convert', path: '/convert/html-ubb', desc: '论坛 UBB 代码与 HTML 标签双向转换及实时渲染预览', icon: '💬' },
+  { id: 'ascii-art', name: '字符线条艺术字', category: 'convert', path: '/convert/ascii-art', desc: '将英文和数字转换为经典 ASCII 字符线条艺术字', icon: '🎨' },
+  { id: 'short-url', name: '在线短网址生成与还原', category: 'convert', path: '/convert/shorturl', desc: '长链接快速缩短为简易短网址，并支持短网址防钓鱼安全反查', icon: '🔗' },
+  { id: 'i18n-convert', name: 'i18n 属性文件互转', category: 'convert', path: '/convert/i18n', desc: '前端 vue-i18n/react-i18next 的 JSON 扁平键值对与 Java Properties 互转', icon: '🌐' },
+  { id: 'gif2frame', name: '在线 GIF 转成帧图片', category: 'convert', path: '/convert/gif2frame', desc: '纯前端本地解析 GIF 动图并提取所有分帧', icon: '🎞️' },
+  { id: 'video2frame', name: '在线视频转成帧图片', category: 'convert', path: '/convert/video2frame', desc: '纯前端提取视频关键帧，支持自定义提取频率', icon: '🎬' },
+  { id: 'sqlconvertsql', name: 'SQL 转 SQL (不同数据库互转)', category: 'convert', path: '/convert/sqlconvertsql', desc: '支持 Oracle、MySQL、MSSQL、PostgreSQL、MongoDB、SQLite 语法一键互相转换', icon: '🔁' },
+
+  { id: 'px-to-rem', name: 'PX 与 REM / EM 换算', category: 'frontend', path: '/uitools/px-to-rem', desc: '输入 PX 实时计算 REM，支持整段 CSS 样式代码批量换算', icon: '📏' },
+  { id: 'safe-color', name: 'WEB 安全色速查表', category: 'frontend', path: '/uitools/safe-color', desc: '216 种跨平台标准网页安全色调色板', icon: '🌈' },
+  { id: 'device-screen', name: '主流设备屏幕尺寸规范', category: 'frontend', path: '/uitools/device-screen', desc: 'iPhone、iPad、主流 Android 旗舰屏幕物理与逻辑分辨率、DPR 速查', icon: '🖥️' },
+  { id: 'pornhub-logo', name: 'Pornhub 风格 Logo 生成器', category: 'frontend', path: '/uitools/pornhub-logo', desc: '黑底白字加圆角橙黄背景标志性双段 Logo 在线生成与高清 PNG 下载', icon: '🟧' },
+  { id: 'youtube-logo', name: 'YouTube 风格 Logo 生成器', category: 'frontend', path: '/uitools/youtube-logo', desc: 'YouTube 经典红底白字矩形圆角 Logo 在线定制与 PNG 图片导出', icon: '🟥' },
+  { id: 'image-invert', name: '图片反相反色在线工具', category: 'frontend', path: '/uitools/image-invert', desc: '纯前端本地 Canvas 极速像素颜色反转，生成底片负片效果并支持下载', icon: '🌓' },
+  { id: 'border-radius-image', name: '在线生成圆角图片与头像', category: 'frontend', path: '/uitools/border-radius-image', desc: '图片快速裁切为自定义圆角矩形或圆形头像，输出透明通道 PNG', icon: '🔘' },
+  { id: 'ico-maker', name: 'ICO 图标制作与转换', category: 'frontend', path: '/uitools/ico-maker', desc: '将普通图片转换为包含多尺寸的标准 favicon.ico', icon: '🌟' },
+  { id: 'image-process', name: '图片综合处理工作台', category: 'frontend', path: '/uitools/image-process', desc: '纯前端本地图片裁剪、质量压缩、格式转换与尺寸大小调整', icon: '🖼️' },
+  { id: 'svg-editor', name: 'SVG 在线编辑与实时预览', category: 'frontend', path: '/uitools/svg-editor', desc: 'SVG 矢量源码实时编辑排版、即时画布缩放预览', icon: '📐' },
+  { id: 'openweb', name: '弹出窗口 (window.open) 生成器', category: 'frontend', path: '/uitools/openweb', desc: '图形化配置弹出窗口尺寸、位置与参数，生成原生 window.open 调用代码', icon: '🪟' },
+
+  { id: 'sql-param-replace', name: 'SQL 占位符参数还原', category: 'backend', path: '/backend/sql-param-replace', desc: '自动将 MyBatis / JPA 日志中的 Preparing 问号 SQL 与 Parameters 参数还原为可执行 SQL', icon: '🧩' },
+  { id: 'properties-yaml', name: 'Properties 与 YAML 互转', category: 'backend', path: '/backend/properties-yaml', desc: 'Spring Boot 配置文件 application.properties 与 application.yml 双向转换', icon: '🍃' },
+  { id: 'sql2pojo', name: 'SQL 建表转 POJO / C# 实体类', category: 'backend', path: '/backend/sql2pojo', desc: '解析 MySQL CREATE TABLE 建表语句，自动生成 Lombok/JPA 或 C# Model 实体类', icon: '🧱' },
+  { id: 'install-jar', name: 'Maven 本地 Jar 安装命令生成', category: 'backend', path: '/backend/installjar', desc: '快速生成 mvn install:install-file 命令行及对应 pom.xml 的 dependency 依赖', icon: '☕' },
+  { id: 'sqlview', name: '数据库插入、修改字段视图', category: 'backend', path: '/backend/sqlview', desc: '可视化解析并对应 INSERT / UPDATE 复杂语句的字段与数值', icon: '📋' },
+
+  { id: 'websocket-tester', name: 'WebSocket 在线测试', category: 'network', path: '/httputil/websocket', desc: '在线测试 ws:// 或 wss:// 连接、发送消息与历史收发流', icon: '🔌' },
+  { id: 'subnet-calc', name: 'IP 与子网掩码计算', category: 'network', path: '/httputil/subnet', desc: 'CIDR 掩码计算、网络地址、广播地址、可用主机数与范围计算', icon: '💻' },
+  { id: 'client-info', name: '浏览器与客户端详细信息', category: 'network', path: '/httputil/clientinfo', desc: '操作系统、屏幕物理/逻辑分辨率、DPR、网络及 WebGL GPU 硬件信息检测', icon: '🖥️' },
+  { id: 'get-ip', name: '获取我的外网 IP', category: 'network', path: '/httputil/getip', desc: '快速获取当前公网 IPv4 / IPv6 地址及地理位置运营商信息', icon: '📍' },
+  { id: 'query-ip', name: 'IP 归属地与运营商查询', category: 'network', path: '/httputil/queryip', desc: '输入任意 IPv4 地址，即时查询物理地理位置、经纬度、ASN 编号与服务商', icon: '🗺️' },
+  { id: 'spider-check', name: '搜索引擎蜘蛛 IP 识别', category: 'network', path: '/httputil/spider', desc: '百度、谷歌、必应、搜狗、360 等蜘蛛 IP 匹配与反向 DNS 鉴别指南', icon: '🕷️' },
+  { id: 'cdn-check', name: 'CDN 节点 IP 识别工具', category: 'network', path: '/httputil/cdn-check', desc: '快速甄别目标 IP 是否属于阿里云、腾讯云、Cloudflare 等 CDN 边缘节点', icon: '🚀' },
+  { id: 'ssl-cert', name: 'SSL 证书过期时间查询', category: 'network', path: '/httputil/ssl-cert', desc: '在线探测目标 HTTPS 域名的真实 TLS 证书、颁发机构、到期失效时间与剩余天数', icon: '🔒' },
+
+  { id: 'user-agent', name: '常用 User-Agent 库与解析', category: 'docs', path: '/docs/user-agent', desc: '当前浏览器 UA 检测，及 iOS/Android/微信/爬虫蜘蛛高频 UA 速查', icon: '🌐' },
+  { id: 'http-status', name: 'HTTP 状态码速查表', category: 'docs', path: '/docs/http-status', desc: '完整 1xx-5xx HTTP 响应状态码速查与常见排查原因', icon: '🚦' },
+  { id: 'port-doc', name: '常用网络端口对照表', category: 'docs', path: '/docs/port', desc: 'Web、数据库、Redis、RabbitMQ、Nacos 等常用服务默认端口速查', icon: '🚪' },
+  { id: 'ascii-doc', name: 'ASCII 码完整对照表', category: 'docs', path: '/docs/ascii', desc: '0-127 完整 ASCII 码，十进制、十六进制、二进制与字符含义对照', icon: '🔣' },
+  { id: 'http-content', name: 'HTTP Content-Type 对照表', category: 'docs', path: '/docs/http-content', desc: '常见 MIME 类型与 Content-Type 对照速查', icon: '📋' },
+  { id: 'android-manifest', name: 'AndroidManifest 常用权限字典', category: 'docs', path: '/docs/android-manifest', desc: 'Android 开发常用权限声明与用途说明速查', icon: '🤖' },
+  { id: 'dev-env', name: '开发环境依赖', category: 'docs', path: '/docs/dev-env', desc: '常用开发环境搭建与依赖配置速查', icon: '⚙️' },
+
+  { id: 'chatgpt-tokens', name: 'AI / ChatGPT Token 计数估算', category: 'othertools', path: '/othertools/chatgpt-tokens', desc: '估算文本的 Token 数量，支持多种模型', icon: '🤖' },
+  { id: 'cron', name: 'Cron 表达式生成/校验', category: 'othertools', path: '/othertools/cron', desc: '可视化生成 Cron 表达式，支持校验与下次执行时间预览', icon: '⏰' },
+  { id: 'mdeditor', name: 'Markdown 分屏编辑器', category: 'othertools', path: '/othertools/mdeditor', desc: 'Markdown 实时预览编辑', icon: '📝' },
+  { id: 'keycode', name: '键盘按键 KeyCode 速查', category: 'othertools', path: '/othertools/keycode', desc: '键盘按键与 keyCode 对照表', icon: '⌨️' },
+  { id: 'hotnews', name: '今日热榜 · 实时聚焦', category: 'othertools', path: '/othertools/hotnews', desc: '聚合 36氪、掘金、知乎、少数派 等平台实时热点', icon: '🔥' },
+  { id: 'diff', name: '文本差异对比 (Diff)', category: 'othertools', path: '/othertools/diff', desc: '两段文本逐行对比，高亮差异', icon: '🔀' },
+  { id: 'regex', name: '正则表达式测试', category: 'othertools', path: '/othertools/regex', desc: '在线正则表达式匹配测试与分组提取', icon: '🔍' },
+  { id: 'barcode', name: '条形码在线生成器', category: 'othertools', path: '/othertools/barcode', desc: '生成 Code128、EAN-13 等条形码图片', icon: '📊' },
+  { id: 'dir-explorer', name: '本地目录文件浏览器', category: 'othertools', path: '/filetool/dir-explorer', desc: '纯前端本地目录树浏览与文件管理', icon: '📁' },
+  { id: 'deduplicate', name: '文本去重与多行排序', category: 'othertools', path: '/othertools/deduplicate', desc: '多行文本去重、排序与统计', icon: '🧹' },
+  { id: 'str-split', name: '字符串批量分割提取', category: 'othertools', path: '/othertools/str-split', desc: '按分隔符批量分割字符串并提取', icon: '✂️' },
+  { id: 'regex-create', name: '常用正则表达式代码生成', category: 'othertools', path: '/othertools/regex-create', desc: '常用正则表达式模板与多语言代码生成', icon: '📝' },
+  { id: 'stats', name: '文本深度统计与字数分析', category: 'othertools', path: '/othertools/stats', desc: '字符数、单词数、行数、段落数等多维度统计', icon: '📊' },
+
+  { id: 'c0xff', name: '数据 0xFF 位运算换算', category: 'iot', path: '/iot/c0xff', desc: '位运算与掩码计算工具', icon: '🔧' },
+  { id: 'hexparse', name: '物联网 16 进制报文解析', category: 'iot', path: '/iot/hexparse', desc: '解析物联网设备 16 进制通信报文', icon: '📡' },
+
+  { id: 'jsdec', name: 'JS 全能解密 (jsdec)', category: 'openplatform', path: '/ext/jsdec', desc: 'JavaScript 代码解密与反混淆', icon: '🔓' },
+  { id: 'jsobfuscator', name: 'JavaScript 代码混淆器', category: 'openplatform', path: '/ext/jsobfuscator', desc: 'JavaScript 代码混淆加密保护', icon: '🔐' },
+  { id: 'qq-tools', name: 'QQ 互联 API 调试工具', category: 'openplatform', path: '/ext/qq-tools', desc: 'QQ 互联 API 在线调试', icon: '🐧' },
+  { id: 'somd5', name: 'SOMD5 在线彩虹表解密', category: 'openplatform', path: '/ext/somd5', desc: 'MD5 在线彩虹表查询解密', icon: '🌈' },
+  { id: 'ssleye', name: 'SSL 协议套件探测', category: 'openplatform', path: '/ext/ssleye', desc: '探测目标服务器 SSL/TLS 协议版本与加密套件', icon: '🔒' },
+  { id: 'tb-api', name: '淘宝 API 测试工具', category: 'openplatform', path: '/ext/tb-api', desc: '淘宝开放平台 API 在线测试', icon: '🛒' },
+  { id: 'tb-oauth', name: '淘宝 OAuth2.0 测试工具', category: 'openplatform', path: '/ext/tb-oauth', desc: '淘宝 OAuth2.0 授权流程在线调试', icon: '🔑' },
+  { id: 'alipay-risk', name: '支付宝 API 风险与安全检测工具', category: 'openplatform', path: '/ext/alipay-risk', desc: '支付宝 API 风险检测与安全扫描', icon: '🛡️' },
+  { id: 'qywx-debug', name: '企业微信 (企业号) 调试工具', category: 'openplatform', path: '/ext/qywx-debug', desc: '企业微信 API 在线调试', icon: '💼' },
+  { id: 'weibo-console', name: '新浪微博 API 工具台', category: 'openplatform', path: '/ext/weibo-console', desc: '新浪微博 API 在线调试', icon: '📱' },
+  { id: 'wxcard-sign', name: '微信卡券 JSAPI 签名校验工具', category: 'openplatform', path: '/ext/wxcard-sign', desc: '微信卡券 JSAPI 签名生成与校验', icon: '🎫' },
+  { id: 'tb-props', name: '淘宝商品属性工具', category: 'openplatform', path: '/ext/tb-props', desc: '淘宝商品属性查询与解析', icon: '📦' },
+  { id: 'alipay-log', name: '支付宝联调日志排查', category: 'openplatform', path: '/ext/alipay-log', desc: '支付宝联调日志分析与排查', icon: '📋' },
+  { id: 'alipay-troubleshoot', name: '支付宝开发者自助排查工具', category: 'openplatform', path: '/ext/alipay-troubleshoot', desc: '支付宝开放平台常见问题自助排查', icon: '🔧' },
+  { id: 'wechat-debug', name: '微信公众平台在线接口调试', category: 'openplatform', path: '/ext/wechat-debug', desc: '微信公众平台 API 在线调试', icon: '💬' },
+  { id: 'wxjs-sign', name: '微信 JS 接口签名校验工具', category: 'openplatform', path: '/ext/wxjs-sign', desc: '微信 JS-SDK 签名生成与校验', icon: '✅' },
+  { id: 'wxpay-jsapi-sign', name: '微信支付接口签名校验工具', category: 'openplatform', path: '/ext/wxpay-jsapi-sign', desc: '微信支付 JSAPI 签名生成与校验', icon: '💰' },
+  { id: 'wxpay-verify', name: '微信公众平台支付接口调试', category: 'openplatform', path: '/ext/wxpay-verify', desc: '微信支付接口在线调试', icon: '💳' },
+  { id: 'wechat-swagger', name: '微信服务端接口文档及调试工具', category: 'openplatform', path: '/ext/wechat-swagger', desc: '微信服务端 API 文档与在线调试', icon: '📖' },
+
+  { id: 'doc-bootstrap', name: 'Bootstrap 3 组件文档', category: 'resources', path: '/ext/doc-bootstrap', desc: 'Bootstrap 3 中文文档速查', icon: '📖' },
+  { id: 'fontawesome', name: 'FontAwesome 矢量图标库', category: 'resources', path: '/ext/fontawesome', desc: 'FontAwesome 图标库浏览与代码生成', icon: '🎨' },
+  { id: 'h5-maker', name: 'H5 模板在线制作', category: 'resources', path: '/ext/h5-maker', desc: 'H5 页面在线制作工具', icon: '📱' },
+  { id: 'runjs', name: 'RunJS 在线前端编辑器', category: 'resources', path: '/ext/runjs', desc: '在线 HTML/CSS/JS 编辑与运行', icon: '▶️' },
+  { id: 'doc-vue2', name: 'Vue.js 官方中文文档', category: 'resources', path: '/ext/doc-vue2', desc: 'Vue 2.x 中文文档速查', icon: '💚' },
+  { id: 'doc-wxpay-openapi', name: '微信支付 OpenAPI 库文档', category: 'resources', path: '/ext/doc-wxpay-openapi', desc: '微信支付 OpenAPI 文档', icon: '📖' },
+  { id: 'doc-wxpay-v3', name: '微信支付 V3 官方文档', category: 'resources', path: '/ext/doc-wxpay-v3', desc: '微信支付 V3 接口文档', icon: '📖' },
+  { id: 'doc-wxmini-api', name: '微信小程序 API 开发文档', category: 'resources', path: '/ext/doc-wxmini-api', desc: '微信小程序 API 文档速查', icon: '📖' },
+  { id: 'doc-alipay-sp', name: '支付宝服务商文档', category: 'resources', path: '/ext/doc-alipay-sp', desc: '支付宝服务商开发文档', icon: '📖' },
+  { id: 'doc-wxpay-all', name: '微信支付最全文档', category: 'resources', path: '/ext/doc-wxpay-all', desc: '微信支付全量接口文档', icon: '📖' },
+  { id: 'doc-wxpay-sp', name: '微信支付服务商文档', category: 'resources', path: '/ext/doc-wxpay-sp', desc: '微信支付服务商模式文档', icon: '📖' },
+  { id: 'doc-alipay-store', name: '支付宝智慧门店文档', category: 'resources', path: '/ext/doc-alipay-store', desc: '支付宝智慧门店开发文档', icon: '📖' },
+  { id: 'doc-wxmini-cfg', name: '微信小程序配置指南', category: 'resources', path: '/ext/doc-wxmini-cfg', desc: '微信小程序配置文件说明', icon: '📖' },
+  { id: 'doc-taobao', name: '淘宝开放平台开发文档', category: 'resources', path: '/ext/doc-taobao', desc: '淘宝开放平台 API 文档', icon: '📖' },
+  { id: 'doc-tencent', name: '腾讯开放平台官方文档', category: 'resources', path: '/ext/doc-tencent', desc: '腾讯开放平台开发文档', icon: '📖' },
+  { id: 'doc-wxoffi', name: '微信公众平台开发文档', category: 'resources', path: '/ext/doc-wxoffi', desc: '微信公众平台开发文档', icon: '📖' },
+  { id: 'doc-alipay', name: '支付宝开放平台开发文档', category: 'resources', path: '/ext/doc-alipay', desc: '支付宝开放平台开发文档', icon: '📖' },
+  { id: 'font-gen', name: '奇异花样字体生成器', category: 'resources', path: '/ext/font-gen', desc: '在线花样字体生成', icon: '🔤' },
+  { id: 'iconfont', name: '阿里巴巴矢量图标库 (Iconfont)', category: 'resources', path: '/ext/iconfont', desc: 'Iconfont 图标库浏览与代码生成', icon: '🎨' },
+  { id: 'tb-error', name: '淘宝错误码查询工具', category: 'resources', path: '/ext/tb-error', desc: '淘宝开放平台错误码查询', icon: '❗' },
+]
+
+export function getToolsByCategory(categoryId) {
+  return tools.filter(t => t.category === categoryId)
+}
+
+export function getCategory(categoryId) {
+  return categories.find(c => c.id === categoryId)
+}
+
+export function searchTools(keyword) {
+  const kw = keyword.toLowerCase().trim()
+  if (!kw) return []
+  return tools.filter(t =>
+    t.name.toLowerCase().includes(kw) ||
+    t.desc.toLowerCase().includes(kw) ||
+    t.path.toLowerCase().includes(kw)
+  )
+}

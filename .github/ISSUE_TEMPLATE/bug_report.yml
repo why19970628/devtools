@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a problem with a tool
+labels: [bug]
+body:
+  - type: input
+    id: tool
+    attributes:
+      label: Affected tool
+      description: Which tool / page is broken (e.g. "JSON 格式化校验", "/json/format")
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      description: The URL you were on
+  - type: textarea
+    id: input
+    attributes:
+      label: Input used
+      description: The data you entered
+      render: text
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened? Paste error messages if any
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: Browser + OS + version

@@ -1,0 +1,48 @@
+{
+  "name": "devtools",
+  "version": "1.0.0",
+  "description": "A fast, no-backend collection of 132+ developer tools — format, convert, encode, test and debug right in your browser.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "devtools",
+    "developer-tools",
+    "json",
+    "formatter",
+    "converter",
+    "encode",
+    "encryption",
+    "utils",
+    "vue3",
+    "vite",
+    "frontend-only",
+    "opensource"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/why19970628/devtools#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/why19970628/devtools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/why19970628/devtools/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "vue": "^3.4.0",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "vite": "^5.2.0"
+  }
+}
